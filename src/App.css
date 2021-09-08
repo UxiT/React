@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.header {
+  width: 100%;
+  background: #c4c4c4;
+  height: 5.55556vw;
+  margin-bottom: 1.66667vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  max-width: 59.72222vw;
+  width: 100%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+.row.between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row.flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
+
+.sidebar__item {
+  list-style: none;
+  margin-bottom: 0.625vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 11.5vw;
+  padding: 5px;
+}
+
+.sidebar__item:hover {
+  background: #F3F3F3;
+}
+
+.sidebar__item .link {
+  font-family: "Quicksand";
+  font-size: 1.25vw;
+  margin-left: 0.48611vw;
+  text-decoration: none;
+  color: #1B1B1B;
+}
+
+.sidebar__item .link.active {
+  font-weight: 600;
+}
+
+.sidebar__item .icon {
+  width: 1.38889vw;
+  height: 1.38889vw;
+  background-color: #c4c4c4;
+}
+/*# sourceMappingURL=App.css.map */
