@@ -45,6 +45,7 @@
   cursor: pointer;
   width: 11.5vw;
   padding: 5px;
+  text-decoration: none;
 }
 
 .sidebar__item:hover {
