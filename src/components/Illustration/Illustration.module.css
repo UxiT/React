@@ -1,0 +1,162 @@
+.canvas {
+  width: 100%;
+  height: 100vh;
+  background-image: url("Illustration.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0%;
+  top: 0;
+}
+
+.canvas svg {
+  -webkit-transform: rotate(9deg) translate(0, 14vw);
+          transform: rotate(9deg) translate(0, 14vw);
+}
+
+.wind_1 {
+  -webkit-animation: wind 2s ease-in-out infinite;
+          animation: wind 2s ease-in-out infinite;
+}
+
+.wind_2 {
+  -webkit-animation: wind 4s ease-in-out infinite;
+          animation: wind 4s ease-in-out infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wind_3 {
+  -webkit-animation: wind 3s ease-in-out infinite;
+          animation: wind 3s ease-in-out infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes wind {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes wind {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+    opacity: 0;
+  }
+}
+
+.leaves {
+  width: 52.43056vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -40vw) rotate(-9deg);
+          transform: translate(-50%, -40vw) rotate(-9deg);
+}
+
+.leaves svg {
+  width: 100%;
+}
+
+.leave {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.leave_1 {
+  -webkit-animation: leave_1 2s ease-in-out infinite;
+          animation: leave_1 2s ease-in-out infinite;
+}
+
+.leave_2 {
+  -webkit-transform: rotate();
+          transform: rotate();
+}
+
+.leave_3 {
+  -webkit-transform: rotate();
+          transform: rotate();
+}
+
+.leave_4 {
+  -webkit-transform: rotate();
+          transform: rotate();
+}
+
+.leave_5 {
+  -webkit-transform: rotate();
+          transform: rotate();
+}
+
+@-webkit-keyframes leave_1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -20%) rotate(-15deg);
+            transform: translate(-50%, -20%) rotate(-15deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(1.38889vw, 20%) rotate(10deg);
+            transform: translate(1.38889vw, 20%) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+@keyframes leave_1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -20%) rotate(-15deg);
+            transform: translate(-50%, -20%) rotate(-15deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(1.38889vw, 20%) rotate(10deg);
+            transform: translate(1.38889vw, 20%) rotate(10deg);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=Illustration.module.css.map */

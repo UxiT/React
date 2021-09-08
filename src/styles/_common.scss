@@ -1,0 +1,6 @@
+@function d($value){
+    @return($value/14.4*1vw);
+}
+
+$text-dark-red: #57200E;
+$q-font: "Quicksand";

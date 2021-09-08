@@ -1,0 +1,39 @@
+@import "../../styles/common";
+
+$tg: ("from": #2AABEE, "to": #229ED9);
+
+$backgrounds: ("git": #000000,"gmail": #fff , "behance": #1769FF);
+
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.link{
+    display: block;
+    text-decoration: none;
+    width: d(64);
+    height: d(64);
+    border-radius: 6px;
+    background: #f2f2f2;
+    margin: 0 d(7.5);
+}
+
+@each $name, $color in $backgrounds {
+    .link[data-contact='#{$name}']{
+        background: $color;
+    }
+}
+
+.link[data-contact='telegram']{
+    background: linear-gradient(45deg, #2AABEE 0%, #229ED9 100%);
+}

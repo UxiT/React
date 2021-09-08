@@ -1,0 +1,24 @@
+@import '../styles/common';
+
+.nav{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    width: auto;
+    top: d(52);
+    right: 0;
+}
+
+.item{
+    margin: 0 d(36);
+    cursor: pointer;
+}
+
+.text{
+    font-size: d(24);
+    color: $text-dark-red;
+    font-family: $q-font;
+}

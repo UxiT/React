@@ -1,0 +1,50 @@
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  width: 4.44444vw;
+  height: 4.44444vw;
+  border-radius: 6px;
+  background: #f2f2f2;
+  margin: 0 0.52083vw;
+}
+
+.link[data-contact='git'] {
+  background: #000000;
+}
+
+.link[data-contact='gmail'] {
+  background: #fff;
+}
+
+.link[data-contact='behance'] {
+  background: #1769FF;
+}
+
+.link[data-contact='telegram'] {
+  background: linear-gradient(45deg, #2AABEE 0%, #229ED9 100%);
+}
+/*# sourceMappingURL=contacts.module.css.map */
