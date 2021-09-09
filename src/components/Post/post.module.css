@@ -1,0 +1,119 @@
+.post {
+  background: #fff;
+  border-radius: 6px;
+  width: 31.04167vw;
+  padding: 0.83333vw 1.11111vw;
+  margin-top: 1.11111vw;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header_text {
+  margin-left: 0.83333vw;
+}
+
+.header_text h3 {
+  font-family: Roboto;
+  font-size: 1.25vw;
+  font-weight: 400;
+  padding-top: 1vw;
+}
+
+.header_text span {
+  font-size: 0.83333vw;
+  font-family: Roboto;
+  color: #a7a7a7;
+  margin-top: 2px;
+}
+
+.profile_pic {
+  width: 4.16667vw;
+  height: 4.16667vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile_pic img {
+  width: 100%;
+}
+
+.body {
+  margin-top: 1.11111vw;
+}
+
+.body p {
+  font-size: 0.97222vw;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.footer {
+  border-top: 1px solid #ECECEC;
+  margin-top: 0.83333vw;
+  padding-top: 0.83333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.like,
+.repost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.like {
+  margin-right: 1.73611vw;
+}
+
+.icon {
+  width: 1.25vw;
+  height: 1.25vw;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.icon svg {
+  width: 100%;
+}
+
+.stat_text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 0.97222vw;
+  color: #767676;
+}
+/*# sourceMappingURL=post.module.css.map */

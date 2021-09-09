@@ -1,0 +1,99 @@
+.messages {
+  background: #fff;
+  border-radius: 6px;
+  width: 100%;
+  min-height: 41.66667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.11111vw 0.55556vw;
+}
+
+.message {
+  padding: 0.69444vw;
+}
+
+.text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 0.97222vw;
+  color: #1B1B1B;
+}
+
+.dialogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-right: 1px #bebebe solid;
+  min-height: 39.44444vw;
+}
+
+.dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+  padding: 0.97222vw 0.69444vw;
+  width: 14.44444vw;
+  text-decoration: none;
+}
+
+.dialog:hover {
+  background: #F3F3F3;
+}
+
+.dialog .img {
+  width: 3.33333vw;
+  height: 3.33333vw;
+  background: #4c4c4c;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog .img img {
+  height: 100%;
+}
+
+.dialog .title {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.11111vw;
+  margin-left: 0.48611vw;
+  color: #1B1B1B;
+}
+
+.active {
+  background: #F3F3F3;
+}
+
+.chat {
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+  height: 100%;
+}
+/*# sourceMappingURL=messages.module.css.map */

@@ -1,0 +1,113 @@
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.profile__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.picture {
+  background: #fff;
+  border-radius: 6px;
+  padding: 14px 10px;
+  width: 15.27778vw;
+  height: 21.80556vw;
+}
+
+.picture img {
+  border-radius: 6px;
+  height: 100%;
+}
+
+.picture .wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.info {
+  height: 21.04167vw;
+  width: 30.76389vw;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 1.11111vw;
+  margin-top: 1.11111vw;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.name {
+  background: #fff;
+  border-radius: 6px;
+  margin-left: 1.11111vw;
+  width: 30.76389vw;
+  height: 3.61111vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.69444vw 1.38889vw;
+  position: relative;
+}
+
+.name h1 {
+  font-weight: 500;
+  font-size: 1.52778vw;
+  font-family: "Quicksand";
+}
+
+span.online {
+  font-family: "Quicksand";
+  color: #c7c7c7;
+  font-size: 0.83333vw;
+  font-weight: 400;
+  position: absolute;
+  right: 1.38889vw;
+  top: 0.69444vw;
+}
+
+span.online::before {
+  content: "";
+  width: 0.55556vw;
+  height: 0.55556vw;
+  border-radius: 50%;
+  background: #BCF0B3;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -0.83333vw;
+}
+/*# sourceMappingURL=profile.module.css.map */

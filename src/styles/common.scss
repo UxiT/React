@@ -1,0 +1,27 @@
+
+
+@function d($value){
+    @return(($value/14.4)*1vw);
+}
+
+// [VARIABLES]
+
+$font: "Quicksand";
+
+$bg: #ECECEC;
+$gray: #c4c4c4;
+$block-bg: #fff;
+$sidetext: #a7a7a7;
+$black: #1B1B1B;
+$hover: #F3F3F3;
+
+
+$border-radius: 6px;
+
+
+// [MIXINS]
+
+@mixin block(){
+    background: $block-bg;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,65 @@
+
+@import "./styles/common.scss";
+
+.header{
+    width: 100%;
+    background: #c4c4c4;
+    height: d(80);
+    margin-bottom: d(24);
+}
+
+
+.wrapper{
+    max-width: d(860);
+    width: 100%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.row.between{
+    justify-content: space-between;
+}
+
+.row.flex-start{
+    align-items: flex-start;
+}
+
+.sidebar{
+
+    &__item{
+        list-style: none;
+        margin-bottom: d(9);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 11.5vw;
+        padding: 5px;
+        text-decoration: none;
+
+        &:hover{
+            background: $hover;
+        }
+
+        .link{
+            font-family: $font;
+            font-size: d(18);
+            margin-left: d(7);
+            text-decoration: none;
+            color: $black;
+        }
+
+        .link.active{
+            font-weight: 600;
+        }
+
+        .icon{
+            width: d(20);
+            height: d(20);
+            background-color: $gray;
+        }
+    }
+}
