@@ -1,78 +1,120 @@
 @import "../../styles/common.scss";
 
-.messages{
-    @include block();
-    width: 100%;
-    min-height: d(600);
+.messages {
+  @include block();
+  width: 100%;
+  min-height: d(600);
 
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: d(16) d(8);
+}
+
+.message {
+  padding: d(10);
+}
+
+.text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: d(12);
+  color: $black;
+}
+
+.dialogs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px #bebebe solid;
+  min-height: d(568);
+}
+
+.dialog {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: d(14) d(10);
+  width: d(190);
+  text-decoration: none;
+
+  &:hover {
+    background: $hover;
+  }
+
+  .img {
+    width: d(48);
+    height: d(48);
+    background: #4c4c4c;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
-    padding: d(16) d(8);
-}
+    img {
+      height: 100%;
+    }
+  }
 
-.message{
-    padding: d(10);
-}
-
-
-.text{
+  .title {
     font-family: Roboto;
     font-weight: 400;
-    font-size: d(14);
+    font-size: d(16);
+    margin-left: d(7);
     color: $black;
+  }
 }
 
-.dialogs{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-right: 1px #bebebe solid;
-    min-height: d(568);
+.active {
+  background: $hover;
 }
 
-.dialog{
-    display: flex;
-    align-items: flex-start;
-    cursor: pointer;
-    padding: d(14) d(10);
-    width: d(208);
-    text-decoration: none;
+.chat {
+  flex-basis: 72%;
+  height: d(570);
 
-    &:hover{
-        background: $hover;
-    }
-
-    .img{
-        width: d(48);
-        height: d(48);
-        background: #4c4c4c;
-        border-radius: 50%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img{
-            height: 100%;
-        }
-    }
-
-    .title{
-        font-family: Roboto;
-        font-weight: 400;
-        font-size: d(16);
-        margin-left: d(7);
-        color: $black;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-.active{
-    background: $hover;
+.message_block {
+  height: 100%;
 }
 
-.chat{
-    flex-basis: 68%;
-    height: 100%;
+.textarea {
+  display: flex;
+  background: $red;
+  justify-content: center;
+  align-items: center;
+  height: d(52);
+  padding: d(8) d(16);
+
+  textarea {
+    resize: none;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: d(8) d(10);
+    font-size: d(16);
+    width: 100%;
+  }
+}
+
+.send {
+  border: none;
+  outline: none;
+  background: none;
+  width: d(26);
+  height: d(26);
+  background-image: url("./send.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  margin-left: d(10);
+  flex-shrink: 0;
 }

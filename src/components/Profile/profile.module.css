@@ -26,7 +26,7 @@
 .picture {
   background: #fff;
   border-radius: 6px;
-  padding: 14px 10px;
+  padding: 4px;
   width: 15.27778vw;
   height: 21.80556vw;
 }
@@ -103,11 +103,62 @@ span.online::before {
   width: 0.55556vw;
   height: 0.55556vw;
   border-radius: 50%;
-  background: #BCF0B3;
+  background: #bcf0b3;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: -0.83333vw;
+}
+
+.addPost {
+  background: #fff;
+  border-radius: 6px;
+  width: 30.76389vw;
+  margin-left: 1.11111vw;
+  margin-top: 1.11111vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4.02778vw;
+  padding: 0.55556vw 0.69444vw;
+}
+
+.addPost textarea {
+  resize: none;
+  width: 80%;
+  border: none;
+  outline: none;
+  font-family: Roboto;
+  font-size: 1.11111vw;
+}
+
+.addPost .post_button {
+  border: none;
+  outline: none;
+  background: #cc4f4f;
+  cursor: pointer;
+  position: relative;
+  width: 4.16667vw;
+  height: 2.77778vw;
+  border-radius: 2px;
+  margin-left: 0.69444vw;
+}
+
+.addPost .post_button span {
+  font-family: "Quicksand";
+  color: #fff;
+  font-size: 1.11111vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=profile.module.css.map */

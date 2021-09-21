@@ -22,8 +22,8 @@
 .text {
   font-family: Roboto;
   font-weight: 400;
-  font-size: 0.97222vw;
-  color: #1B1B1B;
+  font-size: 0.83333vw;
+  color: #1b1b1b;
 }
 
 .dialogs {
@@ -37,7 +37,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border-right: 1px #bebebe solid;
+  border-left: 1px #bebebe solid;
   min-height: 39.44444vw;
 }
 
@@ -50,12 +50,12 @@
           align-items: flex-start;
   cursor: pointer;
   padding: 0.97222vw 0.69444vw;
-  width: 14.44444vw;
+  width: 13.19444vw;
   text-decoration: none;
 }
 
 .dialog:hover {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 
 .dialog .img {
@@ -84,16 +84,72 @@
   font-weight: 400;
   font-size: 1.11111vw;
   margin-left: 0.48611vw;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 
 .active {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 
 .chat {
-  -ms-flex-preferred-size: 68%;
-      flex-basis: 68%;
+  -ms-flex-preferred-size: 72%;
+      flex-basis: 72%;
+  height: 39.58333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.message_block {
   height: 100%;
+}
+
+.textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #cc4f4f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.61111vw;
+  padding: 0.55556vw 1.11111vw;
+}
+
+.textarea textarea {
+  resize: none;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 0.55556vw 0.69444vw;
+  font-size: 1.11111vw;
+  width: 100%;
+}
+
+.send {
+  border: none;
+  outline: none;
+  background: none;
+  width: 1.80556vw;
+  height: 1.80556vw;
+  background-image: url("./send.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  margin-left: 0.69444vw;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 /*# sourceMappingURL=messages.module.css.map */

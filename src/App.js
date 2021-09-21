@@ -12,15 +12,19 @@ function App(props) {
       <div className="App">
         <Header />
         <div className="wrapper row between flex-start">
-          <Sidebar nav={props.nav}/>
+          <Sidebar nav={props.state.nav} />
           <Route
             path="/messages"
-            render={() => <Messages messages={props.messages} dialogs={props.dialogs}/>}
+            render={() => <Messages state={props.state.messagesPage} />}
           />
           <Route
             path="/profile"
             render={() => (
-              <Profile name={props.profile.name} img={props.profile.img} posts={props.posts}/>
+              <Profile
+                state={props.state.profilePage}
+                addPost={props.addPost}
+                editPostText={props.editPostText}
+              />
             )}
           />
         </div>

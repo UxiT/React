@@ -1,27 +1,31 @@
-
-
-@function d($value){
-    @return(($value/14.4)*1vw);
+@function d($value) {
+  @return (($value/14.4) * 1vw);
 }
 
 // [VARIABLES]
 
 $font: "Quicksand";
 
-$bg: #ECECEC;
+$bg: #ececec;
 $gray: #c4c4c4;
 $block-bg: #fff;
 $sidetext: #a7a7a7;
-$black: #1B1B1B;
-$hover: #F3F3F3;
+$black: #1b1b1b;
+$hover: #f3f3f3;
+$red: #cc4f4f;
 
-
-$border-radius: 6px;
-
+$border-radius: 4px;
 
 // [MIXINS]
 
-@mixin block(){
-    background: $block-bg;
-    border-radius: $border-radius;
+@mixin block() {
+  background: $block-bg;
+  border-radius: $border-radius;
+}
+
+@mixin bgs($bg, $size, $position: center) {
+  background-image: url("#{bg}");
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
 }
