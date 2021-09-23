@@ -3,19 +3,23 @@ import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import state, { subscribe, addPost, editPostText } from "./redux/state";
+import store from "./redux/state";
 
-let renderPage = () => {
+let renderPage = (state) => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} addPost={addPost} editPostText={editPostText} />
+      <App
+        state={store._state}
+        addPost={store.addPost}
+        editPostText={store.editPostText}
+      />
     </BrowserRouter>,
     document.getElementById("root")
   );
 };
 
-renderPage(state);
-subscribe(renderPage); // Pattern Observer // publisher-subscriber
+renderPage(store._state);
+store.subscribe(renderPage); // Pattern Observer // publisher-subscriber
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
