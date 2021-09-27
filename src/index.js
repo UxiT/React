@@ -3,7 +3,9 @@ import reportWebVitals from "./reportWebVitals";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import store, {editPostTextActionCreator} from "./redux/state";
+import store from "./redux/redux-store";
+
+console.log(store.getState())
 
 let renderPage = (state) => {
   ReactDOM.render(
@@ -18,7 +20,9 @@ let renderPage = (state) => {
 };
 
 renderPage(store.getState());
-store.subscribe(renderPage); // Pattern Observer // publisher-subscriber
+store.subscribe(() => {
+  renderPage(store.getState());
+}); // Pattern Observer // publisher-subscriber
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
