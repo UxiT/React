@@ -1,54 +1,8 @@
 import React from "react";
 import st from "./profile.module.css";
 import Post from "./../Post/Post";
-
-const ProfileInfo = (props) => {
-  let newPostElement = React.createRef();
-
-  let addPost = () => {
-    props.addPost();
-  };
-
-  let editPostText = () => {
-    let text = newPostElement.current.value;
-    props.editPostText(text);
-  };
-
-  return (
-    <div className={st.wrapper}>
-      <div className={st.name}>
-        <h1>
-          {props.name} {props.lastname}
-        </h1>
-        <span className={`${st.online} ${st.active}`}>online</span>
-      </div>
-      <div className={st.info}></div>
-
-      <div className={st.addPost}>
-        {/* text area */}
-        <textarea
-          onChange={editPostText}
-          ref={newPostElement}
-          value={props.newPostText}
-        ></textarea>
-        <button onClick={addPost} className={st.post_button}>
-          <span>Post</span>
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const ProfilePicture = (props) => {
-  return (
-    <div className={st.picture}>
-      <div className={st.wrapper}>
-        <img src={props.img} alt="profile picture" />
-      </div>
-    </div>
-  );
-};
-
+import { addPostActionCreator, editPostTextActionCreator } from "../../redux/state";
+ 
 const Profile = (props) => {
   let posts = props.state.posts.map((post) => (
     <Post
@@ -67,8 +21,7 @@ const Profile = (props) => {
         <ProfilePicture img={props.state.profile.img} />
         <ProfileInfo
           name={props.state.profile.name}
-          addPost={props.addPost}
-          editPostText={props.editPostText}
+          dispatch={props.dispatch}
           newPostText={props.state.newPostText}
         />
       </div>
@@ -77,5 +30,69 @@ const Profile = (props) => {
     </div>
   );
 };
+
+
+// Profile name + textarea to make a post
+const ProfileInfo = (props) => {
+  let newPostElement = React.createRef();
+
+  let addPost = () => {
+    props.dispatch(addPostActionCreator());
+  };
+
+  let editPostText = () => {
+    let text = newPostElement.current.value;
+    let action = editPostTextActionCreator(text); // object
+    props.dispatch(action);
+  };
+
+  // component itself
+
+  return (
+    <div className={st.wrapper}>
+
+      {/* top rectangle width profile name */}
+      <div className={st.name}>
+        <h1>
+          {props.name} {props.lastname}
+        </h1>
+        <span className={`${st.online} ${st.active}`}>online</span>
+      </div>
+
+      {/* rectangle width profile information (empty for now) */}
+      <div className={st.info}></div>
+
+      {/* text area to create a new post */}
+
+      <div className={st.addPost}>
+        {/* text area */}
+        <textarea
+          onChange={editPostText}
+          ref={newPostElement}
+          value={props.newPostText}
+        ></textarea>
+        <button onClick={addPost} className={st.post_button}>
+          <span>Post</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+// Profile picture
+
+const ProfilePicture = (props) => {
+  return (
+    <div className={st.picture}>
+      <div className={st.wrapper}>
+        <img src={props.img} alt="profile picture" />
+      </div>
+    </div>
+  );
+};
+
+// main Profile component
+
+
 
 export default Profile;

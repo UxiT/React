@@ -6,7 +6,7 @@ import st from "./messages.module.css";
 const Messages = (props) => {
   return (
     <div className={st.messages}>
-      <Chat messages={props.state.messages} />
+      <Chat state={props.state} dispatch={props.dispatch}/>
       <Dialogs dialogs={props.state.dialogs} />
     </div>
   );

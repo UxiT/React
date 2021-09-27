@@ -1,11 +1,25 @@
 
 @import "./styles/common.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500&display=swap');
 
 .header{
-    width: 100%;
-    background: #c4c4c4;
-    height: d(80);
-    margin-bottom: d(24);
+    width: 50%;
+    margin: auto;
+    border-radius: 0 0 50px 50px;
+    background: $dark-gray;
+    height: d(60);
+    display: flex;
+    align-items: center;
+    padding-left: d(80);
+    margin-bottom: d(40);
+
+    &__name{
+        color: #fff;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: d(18);
+        font-weight: 400;
+        
+    }
 }
 
 

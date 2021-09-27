@@ -15,15 +15,14 @@ function App(props) {
           <Sidebar nav={props.state.nav} />
           <Route
             path="/messages"
-            render={() => <Messages state={props.state.messagesPage} />}
+            render={() => <Messages state={props.state.messagesPage} dispatch = {props.dispatch}/>}
           />
           <Route
             path="/profile"
             render={() => (
               <Profile
                 state={props.state.profilePage}
-                addPost={props.addPost}
-                editPostText={props.editPostText}
+                dispatch={props.dispatch}
               />
             )}
           />

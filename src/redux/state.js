@@ -1,4 +1,8 @@
-let renderPage = () => {};
+const ADD_POST = "ADD-POST";
+const EDIT_POST_TEXT = 'EDIT-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+const SEND_MESSAGE = 'SEND-MESSAGE';
+
 
 let store = {
   _state: {
@@ -42,37 +46,63 @@ let store = {
         { id: "2", text: "Hey, how are things?" },
         { id: "3", text: "Could've been better" },
       ],
+
+      newMessageBody: "",
     },
   },
+
+  _renderPage() {},
 
   getState() {
     return this._state;
   },
 
-  addPost() {
-    let obj = {
-      id: 2,
-      name: "John Doe",
-      img: "https://bit.ly/3BUJXdi",
-      text: state.profilePage.newPostText,
-      date: "none",
-      likes: 0,
-      reposts: 0,
-    };
-
-    state.profilePage.posts.push(obj);
-    state.profilePage.newPostText = "";
-    renderPage(state);
-  },
-
-  editPostText(newText) {
-    state.profilePage.newPostText = newText;
-    renderPage(state);
-  },
-
   subscribe(observer) {
-    renderPage = observer;
+    this._renderPage = observer;
+  },
+
+  dispatch(action) {
+    // {type: 'ADD-POST'}
+    if (action.type === ADD_POST) {
+      let obj = {
+        id: 2,
+        name: "John Doe",
+        img: "https://bit.ly/3BUJXdi",
+        text: this._state.profilePage.newPostText,
+        date: "none",
+        likes: 0,
+        reposts: 0,
+      };
+
+      this._state.profilePage.posts.push(obj);
+      this._state.profilePage.newPostText = "";
+      this._renderPage(this._state);
+
+    } else if (action.type === EDIT_POST_TEXT) {
+      this._state.profilePage.newPostText = action.newText;
+      this._renderPage(this._state);
+    }
+    else if (action.type === UPDATE_NEW_MESSAGE_BODY){
+      this._state.messagesPage.newMessageBody = action.body;
+      this._renderPage(this._state);
+    }
+    else if(action.type === SEND_MESSAGE){
+      let body = this._state.messagesPage.newMessageBody;
+      this._state.messagesPage.messages.push({id: 6, text: body});
+      this._state.messagesPage.newMessageBody = '';
+      this._renderPage(this._state);
+    }
+    
   },
 };
+
+export const addPostActionCreator = () => ({type: ADD_POST})
+
+export const editPostTextActionCreator = (text) => 
+        ({type: EDIT_POST_TEXT, newText: text })
+
+export const updateNewMessageBodyCreator = (body)=> ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
+
+export const sendMessageCreator = () => ({type: SEND_MESSAGE})
 
 export default store;
