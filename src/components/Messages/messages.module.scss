@@ -13,7 +13,7 @@
 }
 
 .message {
-  padding: d(10);
+  padding: d(5) d(10);
 }
 
 .text {
@@ -90,8 +90,8 @@
   background: $red;
   justify-content: center;
   align-items: center;
-  height: d(52);
   padding: d(8) d(16);
+  max-height: 150px;
 
   textarea {
     resize: none;
@@ -101,6 +101,12 @@
     padding: d(8) d(10);
     font-size: d(16);
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &::placeholder{
+      font-family: $font;
+    }
   }
 }
 

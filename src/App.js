@@ -5,6 +5,7 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Messages from "./components/Messages/Messages";
+import Friends from "./components/Friends/Friends";
 
 function App(props) {
   return (
@@ -25,6 +26,10 @@ function App(props) {
                 dispatch={props.dispatch}
               />
             )}
+          />
+          <Route
+            path="/friends"
+            render={() => (<Friends state={props.state.users} dispatch={props.dispatch}/>)}
           />
         </div>
       </div>

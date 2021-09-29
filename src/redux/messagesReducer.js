@@ -3,7 +3,7 @@ const SEND_MESSAGE = "SEND-MESSAGE";
 
 let initState = {
   dialogs: [
-    { id: "1", title: "Geralt", img: "https://bit.ly/3tDkkLf" },
+    { id: "1", title: "Geralt", img: "https://bit.ly/3tDkkLf", messages: [{text: ""},] },
     { id: "2", title: "Triss", img: "https://bit.ly/3yWQ8vx" },
     { id: "3", title: "Ciri", img: "https://bit.ly/3BUfXhz" },
     { id: "4", title: "Dandelion", img: "https://bit.ly/38P2dIz" },

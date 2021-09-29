@@ -12,9 +12,21 @@ const Chat = (props) => {
     props.dispatch(updateNewMessageBodyCreator(body));
   } 
 
-  let onSend = () =>{
+  let onSend = (e) =>{
     props.dispatch(sendMessageCreator());
   }
+
+  let adjustHeight = (e)=>{
+    e.target.style.height = "1px";
+    let height = (5 + e.target.scrollHeight);
+    if(height >= 150){
+      e.target.style.height = "150px"
+    }
+    else{
+      e.target.style.height = height+"px";
+    }
+    
+  };
 
   return (
     <div className={st.chat}>
@@ -25,6 +37,7 @@ const Chat = (props) => {
         <textarea 
               value={newMessageBody}
               onChange={onChange} 
+              onKeyUp={adjustHeight}
               placeholder='Write something..'></textarea>
         <button onClick={onSend} className={st.send}></button>
       </div>
