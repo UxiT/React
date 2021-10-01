@@ -1,0 +1,54 @@
+.wrapper {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.38889vw 1.04167vw;
+  width: 100%;
+}
+
+.friend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.04167vw 1.73611vw;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.friend:hover {
+  background-color: #ebe9e9;
+}
+
+.friend h2 {
+  font-size: 1.25vw;
+  color: #1b1b1b;
+  font-weight: 600;
+  padding-top: 1.04167vw;
+  margin-left: 1.73611vw;
+}
+
+.img__wrapper {
+  width: 4.86111vw;
+  height: 4.86111vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.img__wrapper img {
+  height: 100%;
+}
+/*# sourceMappingURL=friends.module.css.map */

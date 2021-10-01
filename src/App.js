@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Messages from "./components/Messages/Messages";
 import Friends from "./components/Friends/Friends";
+import StoreContext from './redux/StoreContext'
 
 function App(props) {
   return (
@@ -13,23 +14,27 @@ function App(props) {
       <div className="App">
         <Header />
         <div className="wrapper row between flex-start">
-          <Sidebar nav={props.state.nav} />
+
+          <StoreContext.Consumer>{
+            (store)=> (<Sidebar nav={store.getState().nav} />)
+            }
+          </StoreContext.Consumer>
+          
           <Route
             path="/messages"
-            render={() => <Messages state={props.state.messagesPage} dispatch = {props.dispatch}/>}
-          />
-          <Route
-            path="/profile"
             render={() => (
-              <Profile
-                state={props.state.profilePage}
-                dispatch={props.dispatch}
-              />
+              <Messages/>
             )}
           />
           <Route
+            path="/profile"
+            render={() => <Profile />}
+          />
+          <Route
             path="/friends"
-            render={() => (<Friends state={props.state.users} dispatch={props.dispatch}/>)}
+            render={() => (
+              <Friends state={props.state.users} dispatch={props.dispatch} />
+            )}
           />
         </div>
       </div>

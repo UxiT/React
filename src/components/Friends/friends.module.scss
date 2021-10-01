@@ -1,0 +1,43 @@
+@import '../../styles//common.scss';
+
+
+.wrapper{
+    @include block();
+    padding: d(20) d(15);
+    width: 100%;
+}
+
+.friend{
+    display: flex;
+    flex-direction: row;
+    padding: d(15) d(25);
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover{
+        background-color: #ebe9e9 ;
+    }
+
+    h2{
+        font-size: d(18);
+        color: $black;
+        font-weight: 600;
+        padding-top: d(15);
+        margin-left: d(25);
+    }
+}
+
+.img__wrapper{
+    width: d(70);
+    height: d(70);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img{
+        height: 100%;
+    }
+}

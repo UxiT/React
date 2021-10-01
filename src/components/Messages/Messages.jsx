@@ -1,13 +1,19 @@
 import React from "react";
 import Dialogs from "../Dialogs/Dialogs";
-import Chat from "./Chat";
+import ChatContainer from "./ChatContainer";
 import st from "./messages.module.css";
+import StoreContext from "../../redux/StoreContext";
 
 const Messages = (props) => {
   return (
     <div className={st.messages}>
-      <Chat state={props.state} dispatch={props.dispatch}/>
-      <Dialogs dialogs={props.state.dialogs} />
+      <ChatContainer/>
+      
+      <StoreContext.Consumer>{
+        (store) => (<Dialogs dialogs={store.getState().messagesPage.dialogs} />)
+        }
+      
+      </StoreContext.Consumer>
     </div>
   );
 };

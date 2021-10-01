@@ -21,7 +21,7 @@ const messagesReducer = (state = initState, action) => {
 
     case SEND_MESSAGE:
       let body = state.newMessageBody;
-      state.messages.push({ id: 6, text: body });
+      state.messages.push({ id: 2, text: body });
       state.newMessageBody = "";
       return state;
 
