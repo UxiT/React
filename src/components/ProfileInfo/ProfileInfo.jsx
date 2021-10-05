@@ -5,12 +5,12 @@ const ProfileInfo = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        props.addPost()
+        props.addPost();
     };
 
     let editPostText = () => {
         let text = newPostElement.current.value;
-        props.editPostText(text)
+        props.editPostText(text);
     };
 
     return (

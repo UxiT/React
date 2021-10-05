@@ -1,34 +1,27 @@
 import React from 'react';
 import { editPostTextActionCreator, addPostActionCreator } from '../../redux/profileReducer';
 import ProfileInfo from './ProfileInfo';
-import StoreContext from '../../redux/StoreContext';
+import { connect } from 'react-redux';
 
-const ProfileInfoContainer = (props) => {
-
-    return (
-        <StoreContext.Consumer>
-            {
-                (store) => {
-                    let state = store.getState()
-
-                    let addPost = () => {
-                        store.dispatch(addPostActionCreator());
-                    };
-
-                    let editPostText = (text) => {
-                        let action = editPostTextActionCreator(text); // object
-                        store.dispatch(action);
-                    };
-
-                    return (
-                        <ProfileInfo addPost={addPost}
-                            editPostText={editPostText}
-                            newPostText={state.profilePage.newPostText}
-                            name={state.profilePage.profile.name} />)
-                }
-            }
-        </StoreContext.Consumer>
-    )
+let mapStateToProps = (state) =>{
+    return{
+        newPostText: state.profilePage.newPostText,
+        name: state.profilePage.profile.name,
+    }
 }
+
+let mapDispatchToProps = (dispatch) =>{
+    return{
+        addPost: () => {
+            dispatch(addPostActionCreator());
+        },
+        editPostText: (text) =>{
+            let action = editPostTextActionCreator(text); // object
+            dispatch(action);
+        },
+    }
+}
+
+const ProfileInfoContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileInfo);
 
 export default ProfileInfoContainer;

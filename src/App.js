@@ -3,10 +3,9 @@ import { Route, BrowserRouter } from "react-router-dom";
 import React from "react";
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
+import SidebarContainer from "./components/Sidebar/SidebarContainer";
 import Messages from "./components/Messages/Messages";
 import Friends from "./components/Friends/Friends";
-import StoreContext from './redux/StoreContext'
 
 function App(props) {
   return (
@@ -14,22 +13,10 @@ function App(props) {
       <div className="App">
         <Header />
         <div className="wrapper row between flex-start">
+          <SidebarContainer />
 
-          <StoreContext.Consumer>{
-            (store)=> (<Sidebar nav={store.getState().nav} />)
-            }
-          </StoreContext.Consumer>
-          
-          <Route
-            path="/messages"
-            render={() => (
-              <Messages/>
-            )}
-          />
-          <Route
-            path="/profile"
-            render={() => <Profile />}
-          />
+          <Route path="/messages" render={() => <Messages />} />
+          <Route path="/profile" render={() => <Profile />} />
           <Route
             path="/friends"
             render={() => (

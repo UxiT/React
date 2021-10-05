@@ -2,31 +2,27 @@ import React from "react";
 import Message from "./Message";
 import Chat from "./Chat";
 import { sendMessageCreator, updateNewMessageBodyCreator } from "../../redux/messagesReducer";
-import StoreContext from "../../redux/StoreContext";
+import { connect } from "react-redux";
 
-const ChatContainer = (props) => {
-  return (
-    <StoreContext.Consumer>
-      {
-        (store) => {
-          let state = store.getState();
-          let messages = state.messagesPage.messages.map((m) => <Message text={m.text} />);
-          let newMessageBody = state.messagesPage.newMessageBody; // new message text from state.js
 
-          let onChange = (body) => { // Update textarea text on key press
-            store.dispatch(updateNewMessageBodyCreator(body));
-          }
+let mapStateToProps = (state) =>{
+  return{
+    messages: state.messagesPage.messages.map((m) => <Message text={m.text}/>),
+    newMessageBody: state.messagesPage.newMessageBody,
+  }
+}
 
-          let onSend = (e) => {
-            store.dispatch(sendMessageCreator());
-          }
+let mapDispatchToProps = (dispatch)=>{
+  return{
+    onChange: (body)=>{
+      dispatch(updateNewMessageBodyCreator(body));
+    },
+    onSend: ()=>{
+      dispatch(sendMessageCreator());
+    }
+  }
+}
 
-          return (
-            <Chat messages={messages} newMessageBody={newMessageBody} onChange={onChange} onSend={onSend} />
-          )
-        }
-      }
-    </StoreContext.Consumer>)
-};
+const ChatContainer = connect(mapStateToProps, mapDispatchToProps)(Chat)
 
 export default ChatContainer;

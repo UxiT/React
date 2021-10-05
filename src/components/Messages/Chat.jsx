@@ -1,7 +1,5 @@
 import React from "react";
 import st from "./messages.module.css";
-import Message from "./Message";
-import { sendMessageCreator, updateNewMessageBodyCreator } from "../../redux/messagesReducer";
 
 const Chat = (props) => {
 
