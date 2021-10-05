@@ -18,35 +18,32 @@ let initState = {
     },
   ],
 
-  newPostText: "What's on your mind?",
+  newPostText: "Hello everyone!",
 };
 
 const profileReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_POST: {
-      let stateCopy = { ...state };
 
       let obj = {
         id: 2,
         name: "John Doe",
         img: "https://bit.ly/3BUJXdi",
-        text: stateCopy.newPostText,
+        text: state.newPostText,
         date: "none",
         likes: 0,
         reposts: 0,
       };
 
-      stateCopy.posts = [...state.posts];
-      stateCopy.posts.push(obj);
-      stateCopy.newPostText = "";
-      return stateCopy;
+      return {
+        ...state,
+        newPostText: "",
+        posts: [...state.posts, obj],
+      };
     }
 
     case EDIT_POST_TEXT: {
-      let stateCopy = { ...state };
-
-      stateCopy.newPostText = action.text;
-      return stateCopy;
+      return { ...state, newPostText: action.text };
     }
 
     default:

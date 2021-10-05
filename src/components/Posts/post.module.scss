@@ -1,0 +1,98 @@
+@import '../../styles/common.scss';
+
+
+$post-gray: #767676;
+
+.post{
+    @include block();
+    width: d(447);
+    padding: d(12) d(16);
+    margin-top: d(16);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header_text{
+    margin-left: d(12);
+
+    h3{
+        font-family: Roboto;
+        font-size: d(18);
+        font-weight: 400;
+        padding-top: 1vw;
+    }
+
+    span{
+        font-size: d(12);
+        font-family: Roboto;
+        color: $sidetext;
+        margin-top: 2px;
+    }
+}
+.profile_pic{
+    width: d(60);
+    height: d(60);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 100%;
+    }
+}
+
+.body{
+    margin-top: d(16);
+    
+    p{
+        font-size: d(14);
+        font-family: Roboto;
+        font-weight: 400;
+    }
+}
+
+.footer{
+    border-top: 1px solid $bg;
+    margin-top: d(12);
+    padding-top: d(12);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.like,
+.repost{
+    display: flex;
+    align-items: center;
+}
+   
+.like{
+    margin-right: d(25);
+}
+
+
+
+.icon{
+    width: d(18);
+    height: d(18);
+    margin-right: 5px;
+    cursor: pointer;
+
+    svg{
+        width: 100%;
+    }
+}
+
+.stat_text{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: d(14);
+    color: $post-gray;
+}

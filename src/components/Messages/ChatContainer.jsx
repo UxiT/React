@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 let mapStateToProps = (state) =>{
   return{
-    messages: state.messagesPage.messages.map((m) => <Message text={m.text}/>),
+    messages: state.messagesPage.messages,
     newMessageBody: state.messagesPage.newMessageBody,
   }
 }
