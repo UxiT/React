@@ -10,20 +10,19 @@
 .friend{
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: d(15) d(25);
     cursor: pointer;
     border-radius: 8px;
 
-    &:hover{
-        background-color: #ebe9e9 ;
-    }
+    // &:hover{
+    //     background-color: #ebe9e9 ;
+    // }
 
     h2{
         font-size: d(18);
         color: $black;
         font-weight: 600;
-        padding-top: d(15);
-        margin-left: d(25);
     }
 }
 
@@ -36,8 +35,60 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background-color: $red;
 
     img{
         height: 100%;
+    }
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: d(20);
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    margin-top: d(5);
+
+    h3{
+        font-size: d(12);
+        color: #525252;
+        font-weight: 400;
+    }
+}
+
+.country{
+    margin-left: 15px;
+}
+
+.status{
+    margin-top: d(10);
+    font-size: d(12);
+    color: #4b4b4b;
+}
+
+
+.follow{
+    border: none;
+    outline: none;
+    background-color: $red;
+    border-radius: $border-radius;
+    height: d(40);
+    cursor: pointer;
+    margin-left: auto;
+
+    &:hover{
+        opacity: 0.9;
+    }
+
+    span{
+        font-size: d(14);
+        color: #fff;
+        padding: d(10);
     }
 }

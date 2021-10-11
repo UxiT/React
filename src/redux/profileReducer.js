@@ -24,7 +24,6 @@ let initState = {
 const profileReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_POST: {
-
       let obj = {
         id: 2,
         name: "John Doe",
@@ -37,13 +36,17 @@ const profileReducer = (state = initState, action) => {
 
       return {
         ...state,
-        newPostText: "",
         posts: [...state.posts, obj],
+        newPostText: "",
       };
     }
 
     case EDIT_POST_TEXT: {
-      return { ...state, newPostText: action.text };
+
+      return {
+        ...state,
+        newPostText: action.newText,
+      };
     }
 
     default:
@@ -51,9 +54,9 @@ const profileReducer = (state = initState, action) => {
   }
 };
 
-export const addPostActionCreator = () => ({ type: ADD_POST });
+export const addPostAC = () => ({ type: ADD_POST });
 
-export const editPostTextActionCreator = (text) => ({
+export const editPostTextAC = (text) => ({
   type: EDIT_POST_TEXT,
   newText: text,
 });

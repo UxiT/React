@@ -5,7 +5,7 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import SidebarContainer from "./components/Sidebar/SidebarContainer";
 import Messages from "./components/Messages/Messages";
-import Friends from "./components/Friends/Friends";
+import FriendsContainer from "./components/Friends/FriendsContainer";
 
 function App(props) {
   return (
@@ -20,7 +20,7 @@ function App(props) {
           <Route
             path="/friends"
             render={() => (
-              <Friends state={props.state.users} dispatch={props.dispatch} />
+              <FriendsContainer/>
             )}
           />
         </div>
