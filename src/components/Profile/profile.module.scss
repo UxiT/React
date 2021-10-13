@@ -1,0 +1,41 @@
+@import "../../styles/common.scss";
+
+$block_width: d(443);
+$mLeft: d(16);
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.picture {
+  background: $block-bg;
+  border-radius: $border-radius;
+  padding: 4px;
+
+  width: d(220);
+  height: d(314);
+
+  img {
+    border-radius: $border-radius;
+    height: 100%;
+  }
+
+  .wrapper {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}
+

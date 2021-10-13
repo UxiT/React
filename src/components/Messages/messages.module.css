@@ -1,0 +1,173 @@
+.messages {
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 41.66667vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.11111vw 0.55556vw;
+}
+
+.message {
+  padding: 0.34722vw 0.69444vw;
+}
+
+.text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 0.83333vw;
+  color: #1b1b1b;
+}
+
+.dialogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-left: 1px #bebebe solid;
+  min-height: 39.44444vw;
+}
+
+.dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+  padding: 0.97222vw 0.69444vw;
+  width: 13.19444vw;
+  text-decoration: none;
+}
+
+.dialog:hover {
+  background: #f3f3f3;
+}
+
+.dialog .img {
+  width: 3.33333vw;
+  height: 3.33333vw;
+  background: #4c4c4c;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog .img img {
+  height: 100%;
+}
+
+.dialog .title {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.11111vw;
+  margin-left: 0.48611vw;
+  color: #1b1b1b;
+}
+
+.active {
+  background: #f3f3f3;
+}
+
+.chat {
+  -ms-flex-preferred-size: 72%;
+      flex-basis: 72%;
+  height: 39.58333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.message_block {
+  height: 100%;
+}
+
+.textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #cc4f4f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.55556vw 1.11111vw;
+  max-height: 150px;
+}
+
+.textarea textarea {
+  resize: none;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 0.55556vw 0.69444vw;
+  font-size: 1.11111vw;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.textarea textarea::-webkit-input-placeholder {
+  font-family: "Quicksand";
+}
+
+.textarea textarea:-ms-input-placeholder {
+  font-family: "Quicksand";
+}
+
+.textarea textarea::-ms-input-placeholder {
+  font-family: "Quicksand";
+}
+
+.textarea textarea::placeholder {
+  font-family: "Quicksand";
+}
+
+.send {
+  border: none;
+  outline: none;
+  background: none;
+  width: 1.80556vw;
+  height: 1.80556vw;
+  background-image: url("./send.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  margin-left: 0.69444vw;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=messages.module.css.map */

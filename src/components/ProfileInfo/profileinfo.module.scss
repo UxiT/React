@@ -1,0 +1,101 @@
+@import "../../styles/common";
+
+
+$block_width: d(443);
+$mLeft: d(16);
+
+.info {
+  height: d(303);
+  width: $block_width;
+  flex-shrink: 0;
+  margin-left: d(16);
+  margin-top: d(16);
+  @include block();
+}
+
+.name {
+  @include block();
+  margin-left: d(16);
+  width: $block_width;
+  height: d(52);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: d(10) d(20);
+  position: relative;
+
+  h1 {
+    font-weight: 500;
+    font-size: d(22);
+    font-family: $font;
+  }
+}
+
+span.online {
+  font-family: $font;
+  color: #c7c7c7;
+  font-size: d(12);
+  font-weight: 400;
+  position: absolute;
+  right: d(20);
+  top: d(10);
+
+  &::before {
+    content: "";
+    width: d(8);
+    height: d(8);
+    border-radius: 50%;
+    background: #bcf0b3;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: d(-12);
+  }
+}
+
+// add post section
+
+.addPost {
+  @include block();
+  width: $block_width;
+  margin-left: $mLeft;
+  margin-top: d(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: d(58);
+  padding: d(8) d(10);
+
+  textarea {
+    resize: none;
+    width: 80%;
+    border: none;
+    outline: none;
+    font-family: Roboto;
+    font-size: d(16);
+  }
+
+  .post_button {
+    border: none;
+    outline: none;
+    background: $red;
+    cursor: pointer;
+    position: relative;
+    width: d(60);
+    height: d(40);
+    border-radius: 2px;
+    margin-left: d(10);
+
+    span {
+      font-family: $font;
+      color: #fff;
+      font-size: d(16);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

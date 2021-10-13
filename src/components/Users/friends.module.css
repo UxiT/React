@@ -1,0 +1,112 @@
+.wrapper {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.38889vw 1.04167vw;
+  width: 100%;
+}
+
+.friend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.04167vw 1.73611vw;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.friend h2 {
+  font-size: 1.25vw;
+  color: #1b1b1b;
+  font-weight: 600;
+}
+
+.img__wrapper {
+  width: 4.86111vw;
+  height: 4.86111vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #cc4f4f;
+}
+
+.img__wrapper img {
+  height: 100%;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 1.38889vw;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.34722vw;
+}
+
+.location h3 {
+  font-size: 0.83333vw;
+  color: #525252;
+  font-weight: 400;
+}
+
+.country {
+  margin-left: 15px;
+}
+
+.status {
+  margin-top: 0.69444vw;
+  font-size: 0.83333vw;
+  color: #4b4b4b;
+}
+
+.follow {
+  border: none;
+  outline: none;
+  background-color: #cc4f4f;
+  border-radius: 4px;
+  height: 2.77778vw;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.follow:hover {
+  opacity: 0.9;
+}
+
+.follow span {
+  font-size: 0.97222vw;
+  color: #fff;
+  padding: 0.69444vw;
+}
+/*# sourceMappingURL=friends.module.css.map */
