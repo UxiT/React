@@ -1,16 +1,53 @@
+const FOLLOW = "FOLLOW";
+const UNFOLLOW = "UNFOLLOW";
+const SET_USERS = "SET_USERS ";
 
 let initState = {
-    users:[
-        {id: 1, name: "John Doe", img: "https://bit.ly/3BUJXdi"},
-        {id: 2, name: "Geralt of Rivia", img: "https://bit.ly/3tDkkLf"},
-        {id: 3, name: "Triss Merigold", img: "https://bit.ly/3yWQ8vx"},
-        {id: 4, name: "Ciri", img: "https://bit.ly/3BUfXhz"},
-        {id: 5, name: "Dandelion", img: "https://bit.ly/38P2dIz"}
-    ]
+  users: [],
 };
 
-const usersReducer = (state = initState, action) =>{
-    return state;
-}
+export const followAC = (userId) => ({ type: FOLLOW, userId: userId });
+export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId: userId });
+export const setUsersAc = (users) => ({ type: SET_USERS, users });
 
-export default usersReducer;
+const friendsReducer = (state = initState, action) => {
+  switch (action.type) {
+    case FOLLOW:
+      return {
+        ...state,
+        users: [
+          ...state.users.map((user) => {
+            if (user.id == action.userId) {
+              return { ...user, follow: true };
+            }
+            return user;
+          }),
+        ],
+      };
+
+    case UNFOLLOW:
+      return {
+        ...state,
+        users: [
+          ...state.users.map((user) => {
+            if (user.id == action.userId) {
+              return { ...user, follow: false };
+            } else {
+              return user;
+            }
+          }),
+        ],
+      };
+
+    case SET_USERS:
+      return {
+        ...state,
+        users: [...state.users, ...action.users],
+      };
+
+    default:
+      return state;
+  }
+};
+
+export default friendsReducer;
