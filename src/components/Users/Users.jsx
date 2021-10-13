@@ -3,19 +3,22 @@ import st from "./friends.module.css";
 import * as axios from "axios";
 
 class Users extends react.Component {
-  getUsers = () => {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
     if (this.props.users.length === 0) {
       axios.get("http://127.0.0.1:8000/api/v1/users/list").then((response) => {
         this.props.setUsers(response.data);
         console.log(response.data);
       });
     }
-  };
+  }
 
   render() {
     return (
       <div className={st.wrapper}>
-        <button onClick={this.getUsers}>Get users</button>
         {this.props.users.map((u) => (
           <div key={u.id} className={st.friend}>
             <div className={st.img__wrapper}>
