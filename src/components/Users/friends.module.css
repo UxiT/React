@@ -94,7 +94,7 @@
   border: none;
   outline: none;
   background-color: #cc4f4f;
-  border-radius: 4px;
+  border-radius: 2px;
   height: 2.77778vw;
   cursor: pointer;
   margin-left: auto;
@@ -108,5 +108,55 @@
   font-size: 0.97222vw;
   color: #fff;
   padding: 0.69444vw;
+}
+
+.pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.8vw 0;
+}
+
+.pages__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.08333vw;
+  height: 2.08333vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+
+.pages__num:hover {
+  background: #f3f3f3;
+}
+
+.pages span {
+  font-family: "Quicksand";
+  font-size: 1.2vw;
+  color: #1b1b1b;
+}
+
+.pages .selected {
+  font-weight: 600;
 }
 /*# sourceMappingURL=friends.module.css.map */
