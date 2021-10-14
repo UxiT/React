@@ -17,7 +17,7 @@ export const setUsersAc = (users) => ({ type: SET_USERS, users });
 export const setPageAC = (page) => ({ type: SET_PAGE, page: page });
 export const setTotalCountAC = (count) => ({ type: SET_TOTAL_COUNT, count: count });
 
-const friendsReducer = (state = initState, action) => {
+const usersReducer = (state = initState, action) => {
   switch (action.type) {
     case FOLLOW:
       return {
@@ -69,4 +69,4 @@ const friendsReducer = (state = initState, action) => {
   }
 };
 
-export default friendsReducer;
+export default usersReducer;

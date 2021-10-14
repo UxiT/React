@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Users from "./Users";
+import UsersAPIComponent from "./UsersAPIComponent";
 import { followAC, unfollowAC, setUsersAc, setPageAC, setTotalCountAC } from "../../redux/usersReducer";
 
 let mapStateToProps = (state) => {
@@ -33,6 +33,6 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 
-const UsersC = connect(mapStateToProps, mapDispatchToProps)(Users);
+const UsersC = connect(mapStateToProps, mapDispatchToProps)(UsersAPIComponent);
 
 export default UsersC;
