@@ -4,7 +4,7 @@ import ProfileInfoContainer from "../ProfileInfo/ProfileInfoContainer";
 import PostsContainer from "../Posts/PostsContainer";
 import ProfilePictureContainer from "../ProfileImage/ProfileImageContainer";
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <div className={st.profile}>
       <div className={st.profile__top}>

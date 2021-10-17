@@ -1,5 +1,6 @@
 import react from "react";
-import st from "./friends.module.css";
+import st from "./users.module.css";
+import { NavLink } from "react-router-dom";
 
 const Users = (props) => {
   let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -29,9 +30,11 @@ const Users = (props) => {
 
       {props.users.map((u) => (
         <div key={u.id} className={st.friend}>
-          <div className={st.img__wrapper}>
-            <img src={u.img} alt='#' />
-          </div>
+          <NavLink to={`profile/${u.id}`}>
+            <div className={st.img__wrapper}>
+              <img src={u.img} alt='#' />
+            </div>
+          </NavLink>
 
           <div className={st.text}>
             <h2 className={st.name}> {u.name} </h2>

@@ -3,19 +3,26 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS ";
 const SET_PAGE = "SET_PAGE";
 const SET_TOTAL_COUNT = "SET_TOTAL_COUNT";
+const SET_LOAD = "SET_LOAD";
+
+// Settings
 
 let initState = {
   users: [],
   pageSize: 3,
   totalUsersCount: null,
   currentPage: 1,
+  isFetching: false,
 };
 
-export const followAC = (userId) => ({ type: FOLLOW, userId: userId });
-export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId: userId });
-export const setUsersAc = (users) => ({ type: SET_USERS, users });
-export const setPageAC = (page) => ({ type: SET_PAGE, page: page });
-export const setTotalCountAC = (count) => ({ type: SET_TOTAL_COUNT, count: count });
+// action creators
+
+export const follow = (userId) => ({ type: FOLLOW, userId: userId });
+export const unfollow = (userId) => ({ type: UNFOLLOW, userId: userId });
+export const setUsers = (users) => ({ type: SET_USERS, users });
+export const setPage = (page) => ({ type: SET_PAGE, page: page });
+export const setTotalCount = (count) => ({ type: SET_TOTAL_COUNT, count: count });
+export const setLoad = (isFetching) => ({ type: SET_LOAD, isFetching: isFetching });
 
 const usersReducer = (state = initState, action) => {
   switch (action.type) {
@@ -62,6 +69,12 @@ const usersReducer = (state = initState, action) => {
       return {
         ...state,
         totalUsersCount: action.count,
+      };
+
+    case SET_LOAD:
+      return {
+        ...state,
+        isFetching: action.isFetching,
       };
 
     default:
