@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, BrowserRouter } from "react-router-dom";
 import React from "react";
-import Profile from "./components/Profile/Profile";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import Header from "./components/Header/Header";
 import SidebarContainer from "./components/Sidebar/SidebarContainer";
 import Messages from "./components/Messages/Messages";
@@ -16,7 +16,7 @@ function App(props) {
           <SidebarContainer />
 
           <Route path='/messages' render={() => <Messages />} />
-          <Route path='/profile' render={() => <Profile />} />
+          <Route path='/profile' render={() => <ProfileContainer />} />
           <Route path='/users' render={() => <UsersC />} />
         </div>
       </div>

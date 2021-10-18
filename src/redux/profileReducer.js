@@ -1,11 +1,9 @@
 const ADD_POST = "ADD-POST";
 const EDIT_POST_TEXT = "EDIT-POST-TEXT";
+const SET_PROFILE = "SET_PROFILE";
 
 let initState = {
-  profile: {
-    name: "John Doe",
-    img: "https://bit.ly/3BUJXdi",
-  },
+  profile: null,
   posts: [
     {
       id: "1",
@@ -49,16 +47,24 @@ const profileReducer = (state = initState, action) => {
       };
     }
 
+    case SET_PROFILE:{
+      return{
+        ...state,
+        profile: action.profile
+      }
+    }
+
     default:
       return state;
   }
 };
 
-export const addPostAC = () => ({ type: ADD_POST });
+export const addPost = () => ({ type: ADD_POST });
 
-export const editPostTextAC = (text) => ({
+export const editPostText = (text) => ({
   type: EDIT_POST_TEXT,
   newText: text,
 });
+export const setUserProfile = (profile) => ({type: SET_PROFILE, profile})
 
 export default profileReducer;

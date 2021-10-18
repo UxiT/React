@@ -1,5 +1,5 @@
 import React from 'react';
-import { editPostTextAC, addPostAC } from '../../redux/profileReducer';
+import { editPostText, addPost } from '../../redux/profileReducer';
 import ProfileInfo from './ProfileInfo';
 import { connect } from 'react-redux';
 
@@ -10,17 +10,7 @@ let mapStateToProps = (state) =>{
     }
 }
 
-let mapDispatchToProps = (dispatch) =>{
-    return{
-        addPost: () => {
-            dispatch(addPostAC());
-        },
-        editPostText: (text) =>{
-            let action = editPostTextAC(text); // object
-            dispatch(action);
-        },
-    }
-}
+let mapDispatchToProps = {addPost, editPostText}
 
 const ProfileInfoContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileInfo);
 
