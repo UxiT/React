@@ -12,6 +12,7 @@ class UsersContainer extends react.Component {
       axios
         .get(`http://127.0.0.1:8000/api/v1/users/list?page=${this.props.currentPage}&size=${this.props.pageSize}`)
         .then((response) => {
+          debugger
           this.props.setUsers(response.data.results);
           this.props.setTotalCount(response.data.count);
           this.props.setLoad(false);

@@ -1,0 +1,70 @@
+.loader__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.auth_form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #1b1b1b;
+}
+
+.auth_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2.08333vw 1.38889vw;
+}
+
+.auth_form form h4 {
+  font-size: 1.66667vw;
+  text-align: center;
+  margin-bottom: 1.04167vw;
+}
+
+.auth_form form label {
+  font-family: Roboto;
+  color: #adadad;
+  font-size: 0.97222vw;
+  margin-bottom: 0.69444vw;
+}
+
+.auth_form form input:not(input[type="submit"]) {
+  margin-bottom: 0.97222vw;
+  font-size: 1.25vw;
+  padding: 0.69444vw;
+}
+
+.auth_form form input[type="submit"] {
+  background: #cc4f4f;
+  border-radius: 50px;
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  margin-top: 1.38889vw;
+  font-weight: bold;
+  font-size: 1.25vw;
+  border: none;
+  outline: none;
+  padding: 0.69444vw 0;
+}
+/*# sourceMappingURL=auth.module.css.map */

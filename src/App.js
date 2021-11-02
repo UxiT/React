@@ -2,7 +2,7 @@ import "./App.css";
 import { Route, BrowserRouter } from "react-router-dom";
 import React from "react";
 import ProfileContainer from "./components/Profile/ProfileContainer";
-import Header from "./components/Header/Header";
+import HeaderContainer from "./components/Header/HeaderC";
 import SidebarContainer from "./components/Sidebar/SidebarContainer";
 import Messages from "./components/Messages/Messages";
 import UsersC from "./components/Users/UsersC";
@@ -11,7 +11,7 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className='App'>
-        <Header />
+        <HeaderContainer />
         <div className='wrapper row between flex-start'>
           <SidebarContainer />
 

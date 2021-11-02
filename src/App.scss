@@ -77,3 +77,20 @@
         }
     }
 }
+
+.form{
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    margin-left: 3vw;
+
+    ul{
+        display: flex;
+        margin-left: 2vw;
+
+        li{
+            margin-left: 1.4vw;
+            list-style: none;
+        }
+    }
+}

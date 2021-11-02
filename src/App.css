@@ -86,4 +86,25 @@
   height: 1.38889vw;
   background-color: #c4c4c4;
 }
+
+.form {
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 3vw;
+}
+
+.form ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2vw;
+}
+
+.form ul li {
+  margin-left: 1.4vw;
+  list-style: none;
+}
 /*# sourceMappingURL=App.css.map */
