@@ -31,6 +31,7 @@ class AuthFormContainer extends React.Component {
 
   // TOKEN AUTH AT api/v1/token-auth/
   handle_login = (e, data) => {
+    try{
     e.preventDefault();
     fetch("http://localhost:8000/api/v1/token-auth/", {
       method: "POST",
@@ -48,11 +49,15 @@ class AuthFormContainer extends React.Component {
           username: json.user.username,
         });
       });
+    }
+    catch (error){
+      console.log(error)
+    }
   };
 
   handle_signup = (e, data) => {
     e.preventDefault();
-    fetch("http://localhost:8000/users", {
+    fetch("http://localhost:8000/core/users/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
