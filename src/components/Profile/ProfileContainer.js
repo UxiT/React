@@ -6,14 +6,19 @@ import { setUserProfile } from "../../redux/profileReducer";
 import { withRouter } from "react-router-dom";
 
 class ProfileContainer extends React.Component {
+
+  // !!
+  // NEED TO ADD THIS TO PROFILE LINK IN NAV!
+  // !!
+  
   componentDidMount() {
     let userId = this.props.match.params.userId;
 
     if (!userId) {
-      userId = 1;
+      userId = this.props.currentId;
     }
 
-    axios.get(`http://127.0.0.1:8000/api/v1/users/user/${userId}`).then((response) => {
+    axios.get(`http://127.0.0.1:8000/api/v1/users/edit/${userId}`).then((response) => {
       this.props.setUserProfile(response.data);
     });
   }
@@ -25,6 +30,7 @@ class ProfileContainer extends React.Component {
 
 let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
+  currentId: state.auth.userId
 });
 let mapDispatchToProps = { setUserProfile };
 

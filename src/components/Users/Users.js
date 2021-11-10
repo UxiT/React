@@ -35,7 +35,7 @@ const Users = (props) => {
         <div key={u.id} className={st.friend}>
           <NavLink to={`profile/${u.id}`}>
             <div className={st.img__wrapper}>
-              <img src={u.img} alt="#" />
+              <img src={u.profile_img} alt="#" />
             </div>
           </NavLink>
 

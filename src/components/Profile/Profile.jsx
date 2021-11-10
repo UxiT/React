@@ -12,11 +12,11 @@ const Profile = (props) => {
     return (
       <div className={st.profile}>
         <div className={st.profile__top}>
-          <ProfilePicture img={props.profile.img} />
+          <ProfilePicture img={props.profile.profile_img} />
           <ProfileInfo
             addPost={props.addPost}
             editPostText={props.editPostText}
-            name={props.profile.name}
+            name={{first_name: props.profile.first_name, last_name: props.profile.last_name}}
             newPostText={props.newPostText}
           />
         </div>

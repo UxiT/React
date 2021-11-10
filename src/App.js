@@ -7,8 +7,10 @@ import SidebarContainer from "./components/Sidebar/SidebarContainer";
 import Messages from "./components/Messages/Messages";
 import UsersC from "./components/Users/UsersC";
 
-function App(props) {
-  return (
+
+
+const App = (props) =>{
+  return(
     <BrowserRouter>
       <div className='App'>
         <HeaderContainer />
@@ -16,12 +18,12 @@ function App(props) {
           <SidebarContainer />
 
           <Route path='/messages' render={() => <Messages />} />
-          <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+          <Route path='/profile/:userId' render={() => <ProfileContainer />} />
           <Route path='/users' render={() => <UsersC />} />
         </div>
       </div>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

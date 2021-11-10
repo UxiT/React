@@ -3,6 +3,7 @@ import profileReducer from "./profileReducer";
 import messagesReducer from "./messagesReducer";
 import navReducer from "./navReducer";
 import usersReducer from "./usersReducer";
+import authReducer from './authReducer'
 
 let reducers = combineReducers({
   users: usersReducer,
@@ -10,8 +11,11 @@ let reducers = combineReducers({
   messagesPage: messagesReducer,
   usersPage: usersReducer,
   nav: navReducer,
+  auth: authReducer
 });
 
 let store = createStore(reducers);
+
+window.store = store;
 
 export default store;

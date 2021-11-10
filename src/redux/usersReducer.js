@@ -54,10 +54,15 @@ const usersReducer = (state = initState, action) => {
       };
 
     case SET_USERS:
-      return {
-        ...state,
-        users: [...action.users],
-      };
+      try{
+        return {
+          ...state,
+          users: [...action.users],
+        };
+      }
+      catch(e){
+        console.log(e)
+      }
 
     case SET_PAGE:
       return {

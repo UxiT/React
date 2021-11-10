@@ -19,7 +19,7 @@ const ProfileInfo = (props) => {
             {/* top rectangle width profile name */}
             <div className={st.name}>
                 <h1>
-                    {props.name}
+                    {props.name.first_name} {props.name.last_name}
                 </h1>
                 <span className={`${st.online} ${st.active}`}>online</span>
             </div>

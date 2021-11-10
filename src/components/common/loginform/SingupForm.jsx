@@ -3,7 +3,8 @@ import React from 'react';
 class SignupForm extends React.Component{
     state={
         username: "",
-        password: ""
+        password: "",
+        name: ""
     };
 
     handle_change = e => {
@@ -26,8 +27,13 @@ class SignupForm extends React.Component{
                 <label htmlFor="username">Username</label>
                 <input type="text" name="username" value={this.state.username} onChange={this.handle_change} />
 
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" value={this.state.name} onChange={this.handle_change}/>
+
                 <label htmlFor="password">password</label>
                 <input type="password" name="password" value={this.state.password} onChange={this.handle_change}/>
+
+                
                 <input type="submit" />
             </form>
         )
